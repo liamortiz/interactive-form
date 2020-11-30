@@ -1,0 +1,166 @@
+@keyframes spin {
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
+.shrink-hide {
+    font-size: 60% !important;
+}
+.active {
+    opacity: 0.3;
+}
+
+.App {
+    .form-container {
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+        margin-top: 4em;
+        border: 1px solid rgb(184, 184, 184);
+        position: relative;
+        overflow: hidden;
+        form {
+            text-align: center;
+            a {
+                display: inline-block;
+                margin-top: 1em;
+                text-decoration: none;
+                color: gray;
+                font-family: 'Helvetica';
+            }
+            .input-container {
+                width: 200px;
+                height: 30px;
+                padding: 1em;
+                margin: 0 auto;
+                position: relative;
+                &:nth-child(1) {
+                    margin-top: 2em;
+                }
+                button {
+                    width: 16px;
+                    height: 16px;
+                    border: none;
+                    background: white;
+                    background-image: url("./password-eye.png");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                    position: absolute;
+                    left: 85%;
+                    top: 30px;
+                    &:focus {
+                        outline: none;
+                    }
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                }
+                span {
+                    font-weight: lighter;
+                    font-family: 'Helvetica';
+                    font-size: 90%;
+                    left: 0px;
+                    top: 0px;
+                    color: rgb(14, 14, 14);
+                    position: absolute;
+                    transition: all .2s;
+                    background: #95D6A4;
+                    padding: .5em;
+                    border-radius: 10px;
+                    color: white;
+                }
+            }
+            input {
+                display: block;
+                font-family: 'Helvetica';
+                font-weight: lighter;
+                text-indent: .5em;
+                line-height: 5em;
+                width: 100%;
+                height: 35px;
+                &:focus {
+                    outline: none;
+                }
+            }
+            .submit {
+                display: block;
+                border: none;
+                width: 100px;
+                height: 40px;
+                margin: 0 auto;
+                margin-top: 2em;
+                background: #FF5856;
+                color: white;
+                font-size: 100%;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+.face-mask {
+    width: 10rem;
+    height: 10rem;
+    margin: 0 auto;
+    margin-top: 1em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("./face-mask.svg");
+    position: relative;
+    
+    .eyeball {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        border-radius: 100%;
+        background: black;
+        z-index: -1;
+        position: absolute;
+        transition: all .2s;
+    }
+    .left-eye {
+        left: 30px;
+        top: 110px;
+    }
+    .right-eye {
+        left: 105px;
+        top: 110px;
+    }
+}
+
+.blob {
+    max-width: 100px;
+    position: absolute;
+    transition: all .2s;
+    animation-name: spin;
+    animation-duration: (random(20) + 5) + s;
+    animation-iteration-count: infinite;
+    animation-delay: 0;
+    animation-timing-function: linear;
+}
+
+.blob1 {
+    top: 270px;
+    left: 95px;
+    z-index: -1;
+}
+.blob2 {
+    top: 0;
+}
+
+.blob3 {
+    top: 400px;
+    left: 150px;
+    width: 50px;
+}
+.blob4 {
+    top: 0;
+    left: 400px;
+}
